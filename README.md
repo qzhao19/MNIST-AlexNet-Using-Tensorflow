@@ -11,5 +11,15 @@ In this repertoire, I created AlexNet network in tensorflow to perform on the mn
 
 # Requirement
 
+- Python 3.6
+- Tensorflow >= 1.14
+- matplotlib 3.1.1
+
+# Contents
+
+    model.py : Class with the graph definition of the AlexNet.
+- 
+
+  
 
 
