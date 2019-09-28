@@ -1,2 +1,12 @@
 # MNIST-AlexNet-Using-Tensorflow
 Using AlexNet neural networks for the classic dataset MNIST
+
+# Overview
+
+MNIST ("Modified National Institute of Standards and Technology") is the de facto “hello world” dataset of computer vision. Since its release in 1999, this classic dataset of handwritten images has served as the basis for benchmarking classification algorithms.
+
+In this repertoire, I created AlexNet network in tensorflow to perform on the mnist dataset. AlexNet is a deep convolutional network for image recognition task, which significantly outperformed all the prior competitors and won the challenge ILSVRC 2012 by reducing the top-5 error from 26% to 15.3%. 
+
+
+
+
