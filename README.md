@@ -18,7 +18,11 @@ In this repertoire, I created AlexNet network in tensorflow to perform on the mn
 # Contents
 
 - `model.py`: Class with the graph definition of the AlexNet.
-- `layers.py`: 
+- `layers.py`: Neuron network layers containing convolutional layer, full collection layer, normalization and maxpooling
+- `evals.py`: Model evaluation's function
+- `train.py`: Script to run the training process.
+
+
 
   
 
