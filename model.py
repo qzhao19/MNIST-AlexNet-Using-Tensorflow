@@ -1,5 +1,4 @@
 import tensorflow as tf
-from evals import calc_loss_acc, train_op
 from layers import max_pooling, dropout, norm, conv2d, fc
 
 
