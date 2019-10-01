@@ -36,7 +36,7 @@ FLAGS = flags.FLAGS
 
 
 
-def train():
+def train(FLAGS):
     """Training model
 
     """
@@ -127,3 +127,9 @@ def train():
         coord.request_stop()
         coord.join(threads)
 
+def main(args):
+    train(FLAGS)
+
+    
+if __name__ == '__main__':
+    tf.app.run()
