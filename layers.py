@@ -13,8 +13,9 @@ def max_pooling(inputs, ksize, stride, padding, name):
     Returns:
         4D tensor of [batch_size, height, width, channels]
     """
-
-    return tf.nn.max_pool(inputs, ksize=[1, ksize[0], ksize[1], 1], strides=[1, stride[0], stride[1], 1], padding=padding, name=name)
+    with tf.variable_scope(name) as scope:
+        value = tf.nn.max_pool(inputs, ksize=[1, ksize[0], ksize[1], 1], strides=[1, stride[0], stride[1], 1], padding=padding, name=scope.name)
+    return value
 
 def dropout(inputs, keep_prob, name):
     """Dropout layer
@@ -33,7 +34,9 @@ def norm(inputs, radius=4, name=None):
     """
     
     """
-    return tf.nn.lrn(inputs, depth_radius=radius, bias=1.0, alpha=1e-4, beta=0.75, name=name)
+    with tf.variable_scope(name) as scope:
+        value = tf.nn.lrn(inputs, depth_radius=radius, bias=1.0, alpha=1e-4, beta=0.75, name=name)
+    return value
 
 # def batch_norm(inputs, name):
 #     """batch normalization layer
