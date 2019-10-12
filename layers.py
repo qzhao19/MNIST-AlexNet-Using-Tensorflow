@@ -81,8 +81,8 @@ def fc(inputs, shape, name):
     """
 
     with tf.variable_scope(name) as scope:
-        weights = tf.get_variable('weights', shape = [shape[0], shape[1]])
-        biases = tf.get_variable('biases', shape = [shape[1]])
+        weights = tf.get_variable('weights', shape = [shape[0], shape[1]], initializer=tf.initializers.he_normal())
+        biases = tf.get_variable('biases', shape = [shape[1]], initializer=tf.initializers.random_normal())
         # outputs = tf.nn.xw_plus_b(inputs, weights, biases, name = scope.name)
         outputs = tf.add(tf.matmul(inputs, weights), biases, name=scope.name)
 
