@@ -27,9 +27,8 @@ def dropout(inputs, keep_prob, name):
     Returns:
         4D tensor of [batch_size, height, width, channels]
     """
-    with tf.variable_scope(name) as scope:
-        value = tf.nn.dropout(inputs, rate=(1-keep_prob), name=name)
-    return value
+    
+    return tf.nn.dropout(inputs, rate=(1-keep_prob), name=name)
 
 
 def norm(inputs, radius=4, name=None):
