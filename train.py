@@ -124,12 +124,8 @@ def train(FLAGS):
             checkpoint_path = os.path.join(save_dir, 'model', 'model.ckpt')
             saver.save(sess, checkpoint_path, global_step=step)
 
-        coord.request_stop()
-        coord.join(threads)
-
-def main(args):
-    train(FLAGS)
-
+            coord.request_stop()
+            coord.join(threads)
     
 if __name__ == '__main__':
-    tf.app.run()
+    train(FLAGS)
