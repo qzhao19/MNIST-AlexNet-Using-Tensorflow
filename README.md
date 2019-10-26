@@ -41,8 +41,8 @@ First, I strongly recommend to take a look at the entire code of this repository
 
     python train.py \
         --valid_steps=11 \
-        --max_steps="1001" \
-        --batch_size="128" \
+        --max_steps=1001 \
+        --batch_size=128 \
         --base_learning_rate=0.001 \
         --input_shape=784 \
         --num_classes=10 \
